@@ -186,7 +186,6 @@ module.exports = function(app) {
 
                 .delete((request, response) => {
                         const board = request.params.board;
-                        // const thread_id = request.body.thread_id;
                         const reply_id = request.body.reply_id;
                         const delete_password = request.body.delete_password;
                         Reply.updateOne({ _id: reply_id, delete_password }, { text: '[deleted]' })
